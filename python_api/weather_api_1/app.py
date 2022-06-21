@@ -7,7 +7,7 @@ app = Flask(__name__)
 @app.route("/kaset_sombun", methods=["GET"])
 def index():
 
-    api_key = "c53e332dc516ab13f41651cb872a1a4e"
+    api_key = ""
 
     city_name = "kaset sombun"
     url = "https://api.openweathermap.org/data/2.5/weather?q={}&appid={}&units=metric".format(city_name,api_key)
