@@ -28,7 +28,7 @@ clear_screen()
 city_name = input("Please enter a City-Name: ")
 #city_name = "kaset sombun"
 
-api_key = "c53e332dc516ab13f41651cb872a1a4e"
+api_key = ""
 url = "https://api.openweathermap.org/data/2.5/weather?q={}&appid={}&units=metric".format(city_name,api_key)
 data = requests.get(url).json()
 
