@@ -18,12 +18,12 @@ def result():
     time_zone = pytz.timezone("ASIA/BANGKOK")
     date_time = datetime.datetime.now(time_zone).strftime("%d.%m.%Y - %H.%M")
 
-    api_key = "c53e332dc516ab13f41651cb872a1a4e"
+    api_key = ""
     url = "https://api.openweathermap.org/data/2.5/weather?q={}&appid={}&units=metric".format(city_name,api_key)
     data = requests.get(url).json()
 
     description = data["weather"][0]["description"]
-    temp = data["main"]["temp"]
+    temp = round(data["main"]["temp"])
     humidity = data["main"]["humidity"]
     wind = data["wind"]["speed"]
 
